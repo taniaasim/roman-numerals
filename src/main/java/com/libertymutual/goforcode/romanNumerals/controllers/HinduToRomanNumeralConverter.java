@@ -36,21 +36,21 @@ public class HinduToRomanNumeralConverter {
 		} 
 		if (input >= 1000) {
 			return "M" + convertWithRecursion(input - 1000);
-		} else if (input >= 900 && input <= 999) {
+		} else if (input >= 900) {
 			return "CM" + convertWithRecursion(input - 900);
-		} else if (input >= 500 && input <= 899) {
+		} else if (input >= 500) {
 			return "D" + convertWithRecursion(input - 500);
-		} else if (input >= 400 && input <= 499) {  
+		} else if (input >= 400) {  
 			return "CD" + convertWithRecursion(input - 400);
-		} else if (input >= 100 && input <= 399) {
+		} else if (input >= 100) {
 			return "C" + convertWithRecursion(input - 100);
-		} else if (input >= 90 && input <= 99) {
+		} else if (input >= 90) {
 			return "XC" + convertWithRecursion(input - 90); 
-		} else if (input >= 50 && input <= 89) {
+		} else if (input >= 50) {
 			return "L" + convertWithRecursion(input - 50);
-		} else if (input >= 40 && input <= 49) {
+		} else if (input >= 40) {
 			return "XL" + convertWithRecursion(input - 40);
-		} else if (input >= 10 && input <= 39) {
+		} else if (input >= 10) {
 			return "X" + convertWithRecursion(input - 10);
 		} else if (input < 10) {
 			return numbers.get(input) + convertWithRecursion(0);
