@@ -6,10 +6,8 @@ import java.util.*;
 
 public class HinduToRomanNumeralConverter {
 	private Map<Integer, String> numbers;
-	private String result;
 		
 	public HinduToRomanNumeralConverter() {
-		result = "";
 		numbers = new HashMap<Integer, String>();
 		numbers.put(1, "I");
 		numbers.put(2, "II");
@@ -54,7 +52,7 @@ public class HinduToRomanNumeralConverter {
 			return "XL" + convertWithRecursion(input - 40);
 		} else if (input >= 10 && input <= 39) {
 			return "X" + convertWithRecursion(input - 10);
-		} else if (input <= 10) {
+		} else if (input < 10) {
 			return numbers.get(input) + convertWithRecursion(0);
 		}
 		return "";
